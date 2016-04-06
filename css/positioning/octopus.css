@@ -1,19 +1,19 @@
 #octopus{
-	position: absolute;
-	margin: 150px;
+	margin: 100px;
 }
 
 #glasses{
-	position: relative;
-	display: inline-block;
-	margin-top: 250px;
-	margin-left: 190px;
+	position: absolute;
+	top: 205px;
+	left: 150px;
 }
 
 #hat{
-	border: 1px solid black;
-	position: relative;
-	display: inline-block;
-	margin-bottom: 75px;
-	margin-right: 75px;
+	position: absolute;
+	top: 30px;
+	left: 90px;
+	
+	
+	
+	
 }
