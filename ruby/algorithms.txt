@@ -14,6 +14,6 @@ Elevator Algorithm
 		-Wait 5 seconds to see if anyone on the elevator is getting off on your current floor and allow them to get off
 		-Once everyone exits or if no one exits, enter the elevator when the doors open
 		-To the left or the right side look for buttons with numbers 
-		-Press the button for the floor number you want to ride the elevator up to
+		-Press the button for the floor number you want to ride the elevator down to
 		-Face the door while you wait for the elevator to reach your floor
 		-When the doors open exit on your floor 
