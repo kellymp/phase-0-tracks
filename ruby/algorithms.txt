@@ -1,0 +1,43 @@
+Elevator Algorithm
+
+-Walk up to the elevator door
+	-If you want to ride the elevator UP to a floor above your current floor press the top "up" button
+		-Wait for the elevator to arrive on your floor and for the doors to open
+		-Wait 5 seconds to see if anyone on the elevator is getting off on your current floor and allow them to get off
+		-Once everyone exits or if no one exits, enter the elevator when the doors open
+		-To the left or the right side look for buttons with numbers 
+		-Press the button for the floor number you want to ride the elevator up to
+		-Face the door while you wait for the elevator to reach your floor
+		-When the doors open exit on your floor 
+	-If you want to ride the elevator DOWN to a floor below your current floor press the bottom "down" button
+		-Wait for the elevator to arrive on your floor and foor the doors to open
+		-Wait 5 seconds to see if anyone on the elevator is getting off on your current floor and allow them to get off
+		-Once everyone exits or if no one exits, enter the elevator when the doors open
+		-To the left or the right side look for buttons with numbers 
+		-Press the button for the floor number you want to ride the elevator down to
+		-Face the door while you wait for the elevator to reach your floor
+		-When the doors open exit on your floor 
+
+
+Shower Algorithm
+
+-Get into the shower and turn on the water
+	-If the water is too cold:
+		-turn the knob to the left to make it warmer
+	-If the water is too hot:
+		-turn the knob to the right to make it colder
+	-When the water if the perfect temperature:
+		-Stand under the water until your hair is thoroughly wet
+		-Move out from under the water
+		-Grab shampoo bottle and squeeze it into your hand until there is enough shampoo for your hair length
+		-Lather the shampoo into your hair until it creates suds
+		-Move back under the water and wash shampoo out of your hair
+		-Move out from under the water
+		-Grab conditioner bottle and squeeze a dime sized amount into your hand
+		-Lather the conditioner into your hair and let it sit for several minutes
+		-Grab loofah, soak it under the water and pour body wash into it until it suds
+		-Rub the loofah all over your body until covered in suds
+		-Step back under the water and wash the conditioner from your hair and the body wash suds from your body
+		-Turn off the water 
+		-Grab a towel and run it over your body and head until your are dry
+		
