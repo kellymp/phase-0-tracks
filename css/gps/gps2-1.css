@@ -1,0 +1,40 @@
+body{
+  color:gray;
+  background-color:yellow;
+  background-image: url("https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png");
+}
+
+header{
+ display:block;
+ margin-left:auto;
+ margin-right:auto;
+ width:60%;
+}
+
+.column-1{
+  display:block;
+  width: 40%;
+  margin:10px 20px 10px 20px;
+}
+
+.column-2{
+  display:block;
+  width: 40%;
+  margin:10px 20px 10px 20px;
+}
+
+section{
+  vertical-algin:top;
+  float: left;
+}
+
+footer{
+  margin:10px 10px 10px 10px;
+  width:100%;
+  clear:both;
+  text-align: center;
+}
+
+h1,h2{
+  color:gray;
+  text-decoration:underline;
