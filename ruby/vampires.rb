@@ -11,5 +11,16 @@ wants_insurance= gets.chomp
 
 current_year= 2016
 actual_age= current_year - birth_year
-puts "#{actual_age}"
+
+if actual_age == employee_age && wants_garlic_bread == "y"
+	puts "Probably not a vampire"
+elsif actual_age != employee_age && (wants_garlic_bread == "n" || wants_insurance == "n")
+	puts "Probably a vampire"
+elsif actual_age != employee_age && (wants_garlic_bread == "n" && wants_insurance == "n")
+	puts "Almost certainly a vampire"
+elsif employee_name == "Drake Cula" || employee_name == "Tu Fang"
+	puts "Definitely a vampire"
+else
+	puts "Results inconclusive"	
+end
 
