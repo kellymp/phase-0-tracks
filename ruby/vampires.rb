@@ -14,10 +14,20 @@ until number_to_process ==0
 	puts "Would you like to enroll in the company's health insurance? (y/n)"
 	wants_insurance= gets.chomp
 
+	puts "List your allegies one at a time. Type done when you are finished."
+	allergy= nil
+	allergy= gets.chomp
+	until allergy =="sunshine" || allergy == "done"
+		puts "list your allegies one at a time. Type done when you are finished."
+	allergy= gets.chomp
+	end
+	
 	current_year= 2016
 	actual_age= current_year - birth_year
 
-	if actual_age == employee_age && wants_garlic_bread == "y"
+	if allergy == "sunshine"
+		puts "Probably a vampire"
+	elsif actual_age == employee_age && wants_garlic_bread == "y"
 		puts "Probably not a vampire"
 	elsif actual_age != employee_age && (wants_garlic_bread == "n" || wants_insurance == "n")
 		puts "Probably a vampire"
