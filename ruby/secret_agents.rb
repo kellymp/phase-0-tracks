@@ -1,81 +1,107 @@
 # 4.6 More Methods
 
-# input string whole alphabet
-
-library = "abcdefghijklmnopqrstuvwxyz"
-
-library[0..2]
-
-
-# Define a method that matches the input to the library string
-# pull the index of the letters individually
-# advance the indices by 1
-# print the new string
-# include an exception for z to a
-
-
-
+# Encrypts a string by advancing each letter forward in the alphabet by 1.
 def encrypt(str)
   index = 0
-  password = str
-  
-  while index < password.length
-      
-    if password[index] == "z"
-        password[index] = "a"
+# Loops the encryption method a number of times equal to the string length  
+  while index < str.length
+# Exception case made to change "z" to "a".      
+    if str[index] == "z"
+        str[index] = "a"
       index += 1
-    elsif password[index] == " "
-      password[index] = password[index] 
+# Exception case made to not make any changes to spaces   
+    elsif str[index] == " "
+      str[index] = str[index] 
       index += 1
     else
-      password[index] = password[index].next
+      str[index] = str[index].next
       index += 1
     
     end
   
   end
-  encrypted_phrase = password
-  puts "#{encrypted_phrase}"
-
-
+  
+  return str
+  
 end
 
-#Define the library
-#still use encrypted length while if loop
-#We want to take the letter of the encrypted phrase and match it to the index of the library
-#subrtract the library idex number by 1 and pull the corresponding letter and make that equal to the encrypted letter 
+#Decrypts a string by advancing each letter backward in the alphabet by 1.
 
 def decrypt(str)
     index = 0
-    encrypted_phrase = str
     library = "abcdefghijklmnopqrstuvwxyz"
-
-  while index < encrypted_phrase.length
-
-    if encrypted_phrase[index] == "a"
-          encrypted_phrase[index] = "z"
+# Loops the decryption method a number of times equal to the string length  
+  while index < str.length 
+# Exception case made to change "a" to "z". 
+    if str[index] == "a"
+          str[index] = "z"
         index += 1
-    elsif encrypted_phrase[index] == " "
-        encrypted_phrase[index] = encrypted_phrase[index]
+# Exception case made to not make any changes to spaces 
+    elsif str[index] == " "
+        str[index] = str[index]
         index += 1
+# Matches the letter in str's indexed value to the library index and subtracts 1 from that value. Then compares that value to the library's index and changes the letter of str
     else
-        encrypted_phrase[index] = library[library.index(encrypted_phrase[index])-1]
+        str[index] = library[library.index(str[index])-1]
         index += 1
 
     end
 
   end
   
-  password = encrypted_phrase
+  return str
   
-  puts "#{password}"
-
 end
 
-encrypt("abc")
-encrypt("zed")
-encrypt("z sodijfoe")
-decrypt("bcd")
-decrypt("afe")
-decrypt("a psodfijoe")  
-decrypt(encrypt("swordfish"))
+#puts encrypt("abc")
+#puts encrypt("zed")
+#puts encrypt("z sodijfoe")
+#puts decrypt("bcd")
+#puts decrypt("afe")
+#puts decrypt("a psodfijoe")  
+
+#puts decrypt(encrypt("swordfish"))
+#Note future agents the nest method call works because the return command gives the value of the nested method allowing the decrypt method to evaluate that return value as a string. 
+
+# Ask agent whether to encrypt or decrypt.
+#   Get that answer with gets.chomp
+# If agent wants to encrypt:
+#  Ask for phrase using gets.chomp
+#  Run the gets.chomp through encrypt method
+# If agent wants to decrypt:
+#  Ask for encrypted phrase using gets.chomp
+#  Run the gets.chomp through decrypt method
+# Print result on screen.
+
+valid_response= false
+
+#loops until the user gives either encrypt or decrypt as a response
+until valid_response
+#Asks agent for preference of encryption or decryption.
+  puts "Hello Agent. Would you like to encrypt or decrypt your passphrase?"
+  preference= gets.chomp
+    
+    if preference == "encrypt"
+#If preference is encrypt, ask for passphrase to be encrypted.
+      puts "What is the passphrase?"
+      passphrase = gets.chomp
+#Calls method to encrypt passphrase.      
+      encrypt(passphrase)
+#Prints the encrypted passphrase.     
+      puts "Your encrypted passphrase is #{passphrase}."
+      valid_response = true
+
+    elsif preference == "decrypt"
+#If preference is decrypt, ask for passphrase to be decrypted. 
+      puts "What would you like to decrypt?"
+      passphrase = gets.chomp
+      decrypt(passphrase)
+#Prints the decrypted passphrase.     
+      puts "Your decrypted passphrase is #{passphrase}."
+      valid_response = true
+    else
+#If user does not enter a valid preference, loops back to beginning.
+      puts "Did not understand."
+      valid_response = false
+    end
+end
