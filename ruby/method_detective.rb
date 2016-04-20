@@ -19,7 +19,7 @@ p "Stop! You’re under arrest!".upcase
 p "the usual".concat(" suspects")
 #=> “the usual suspects”
 
-#“ suspects”.<???>
+p " suspects".prepend("the usual")
 #=> “the usual suspects”
 
 p "The case of the disappearing last letter".chop
