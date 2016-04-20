@@ -7,7 +7,7 @@
 p "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
-# “zom”.<???>
+p "zom".insert(2, "o")
 # => “zoom”
 # or 
 p "zom".replace "zoom"
