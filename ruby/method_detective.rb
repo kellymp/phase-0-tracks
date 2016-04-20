@@ -9,6 +9,9 @@ p "iNvEsTiGaTiOn".swapcase
 
 # “zom”.<???>
 # => “zoom”
+# or 
+p "zom".replace "zoom"
+# => “zoom”
 
 p "enhance".center(15)
 #=> “    enhance    ”
@@ -28,7 +31,7 @@ p "The case of the disappearing last letter".chop
 p "The mystery of the missing first letter".slice(1..-1)
 # => “he mystery of the missing first letter”
 
-# “Elementary  ,    my   dear      Watson!”.<???>""
+p "Elementary  ,    my   dear      Watson!".squeeze
 # => “Elementary, my dear Watson!”
 
 p "z".ord
