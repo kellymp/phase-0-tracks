@@ -14,3 +14,8 @@
 #return fake name
 #create loop for interface until user enters "quit"
 
+
+
+#Release 2
+#use array to store fake names enetered into interface
+#print all data entered when user quits program
