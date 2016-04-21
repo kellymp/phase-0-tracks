@@ -6,6 +6,8 @@ puts "Client name:"
 client = {:name => gets.chomp}
 puts "Client age:"
 client [:age] = gets.chomp.to_i
+puts "Project address:"
+client [:address] = gets.chomp
 puts "Number of rooms in home:"
 client [:rooms] = gets.chomp.to_i
 puts "Decor theme:"
@@ -16,6 +18,8 @@ if gets.chomp == "y"
 else gets.chomp == "n"
 	client [:neutral_palette] = false
 end
+puts "Estimated project length (in months):"
+client [:months_until_complete] = gets.chomp.to_i
 #print hash at bottom when all data in entered 
 p client
 #allow user to update any data, if user enters "none" skip to end
