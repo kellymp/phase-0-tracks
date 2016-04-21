@@ -1,5 +1,5 @@
 clothing_store = {
-	women_section: {
+	womens_section: {
 		location: 'Front of Store',
 		product_info: {
 			shirts_quantity: 15,
@@ -11,7 +11,7 @@ clothing_store = {
 				'Susan'
 			]
 	}
-	Mens_section: {
+	mens_section: {
 		location: 'Middle of Store',
 		product_info: {
 			shirts_quantity: 10,
@@ -23,6 +23,15 @@ clothing_store = {
 				'Liz'
 			]
 	}
-
-	
+	childrens_section: {
+			location: 'Back of Store',
+			product_info: {
+				shirts_quantity: 5,
+				pants_quantity: 5,
+				accessories_quantity: 5
+			}
+			Associate_name: [
+					'Rebecca',
+				]
+	}
 }
