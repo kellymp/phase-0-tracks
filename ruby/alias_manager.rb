@@ -13,13 +13,12 @@
 #Release 1 Interface
 #Ask for user's real name
 puts "What is your name?"
+real_name = gets.chomp
 #return fake name
-
 #create loop for interface until user enters "quit"
 until gets.chomp == "quit"
 	puts "what is your name?"
 end
-
 
 #Release 2 Store aliases
 #use array to store fake names enetered into interface
