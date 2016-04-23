@@ -1,5 +1,9 @@
-# Release 2.1 add a method that takes three items as parameters and returns an array of those items 
+# Release 2 step 2 add a method that takes an array and an item as parameters and returns the array with the item added 
+def add_to_array(per_1, per_2)
+	per_1 << per_2
+end
 
+# Release 2 step 1 add a method that takes three items as parameters and returns an array of those items 
 def build_array(first, second, third)
 	return [first, second, third]
 end
@@ -46,4 +50,7 @@ p build_array("word", 10, "bird")
 p build_array(false, true, 5)
 p build_array("girl", "boy", 234)
 
-#call method (that takes an array and an item as parameters) to return an array
+#call method (that takes an array and an item as parameters) to return an array w/ item added
+p add_to_array([5, true, "brown"], false)
+p add_to_array(["woof", "meow", "moo"], "piglet")
+p add_to_array([7, 20, "eighty"], 9)
