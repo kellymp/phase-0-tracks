@@ -23,6 +23,6 @@ end
 
 #Release 2 Store aliases
 #use array to store fake names enetered into interface
-spy_alias_database = []
+spy_alias_database = {} #hash to store real name and alias together
 p spy_alias_database
 #print all data entered when user quits program
