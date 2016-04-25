@@ -54,6 +54,7 @@ alias_characters.map! do |i|
 end
 
 p alias_characters
+p alias_characters.join('')
 
 #create loop for interface until user enters "quit"
 #fix loop
