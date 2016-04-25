@@ -34,7 +34,7 @@ end
 	end
 
 #create hash to store spy name and alias
-database = { }
+database = {}
 
 #ask for user's real name
 puts "Hello, Agent."
@@ -58,18 +58,15 @@ real_name = gets.chomp
 	end
 #rejoin characters to create alias first and last name
 alias_name = alias_characters.join('')
-#return fake name
+
+if real_name != "quit"
+	#use hash to store fake names enetered into interface
+	database[real_name] = alias_name
+	#return fake name
 	puts "Your alias is #{alias_name}"
-
-#database.each do 
-
-#p database{}
 end
-
-
-
-#Release 2 Store aliases
-#use array to store fake names enetered into interface
-#spy_alias_database = {} #hash to store real name and alias together
-#p spy_alias_database
+end
 #print all data entered when user quits program
+database.each do |real_name, alias_name|
+	puts "#{real_name} is also known as #{alias_name}"
+end
