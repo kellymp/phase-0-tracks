@@ -1,4 +1,4 @@
-#write method to swap first and last name
+#write method to split, swap, and rejoin first and last name
 def real_to_alias(real_name)
 	real_name = real_name.split(' ')
 	real_name = real_name.reverse!
@@ -6,7 +6,6 @@ def real_to_alias(real_name)
 end
 
 #write method to advance vowel to next in alphabet and create edge cases for a & u
-
 	def vowel_next(i)
 		vowels = "aAeEiIoOuU"
 		if i == "u"
@@ -35,15 +34,19 @@ end
 	end
 
 
-#Ask for user's real name
+#ask for user's real name
 puts "Hello, Agent."
 real_name = " "
+
+#create loop for interface until user enters "quit"
 until real_name == "quit"
 puts "Please enter your name. Enter 'quit' to exit."
 real_name = gets.chomp
-
+#implement method to split, swap and rejoin first and last name
 	alias_characters = real_to_alias(real_name)
+#split first and last name into characters
 	alias_characters = alias_characters.split('')
+#implement method to change vowels and consonants to next respective letter
 	alias_characters.map! do |i|
 		  if ["a", "e", "i" ,"o", "u"].include? i
 		    vowel_next(i)
@@ -51,42 +54,12 @@ real_name = gets.chomp
 		    consonant_next(i)
 		  end 
 	end
-	alias_characters = alias_characters.join('')
-	p alias_characters
+#rejoin characters to create alias first and last name
+alias_name = alias_characters.join('')
+#return fake name
+	puts "Your alias is #{alias_name}"
 end
 
-
-
-#create loop for interface until user enters "quit"
-
-
-#split first name and last name into two different strings
-#split_name = real_name.split(' ')
-
-#swap first name and last name 
-#name_swap = split_name.reverse
-
-#p real_name
-#p split_name
-#p name_swap
-
-#join swapped name together with space in between
-#reverse_name = name_swap.join(' ')
-#p reverse_name
-
-#split reversed name into individual characters
-#reverse_characters = reverse_name.split('')
-#p reverse_characters
-
-#set alias name equal to reversed name split into characters
-#agent_alias = reverse_characters
-
-#agent_alias
-
-#change vowels and consonants
-
-
-#return fake name
 
 #Release 2 Store aliases
 #use array to store fake names enetered into interface
