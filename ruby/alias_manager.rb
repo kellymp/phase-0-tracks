@@ -33,6 +33,8 @@ end
 		end
 	end
 
+#create hash to store spy name and alias
+database = { }
 
 #ask for user's real name
 puts "Hello, Agent."
@@ -58,7 +60,12 @@ real_name = gets.chomp
 alias_name = alias_characters.join('')
 #return fake name
 	puts "Your alias is #{alias_name}"
+
+#database.each do 
+
+#p database{}
 end
+
 
 
 #Release 2 Store aliases
