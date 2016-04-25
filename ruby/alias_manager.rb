@@ -40,27 +40,27 @@ real_name = gets.chomp
 #end
 
 #split first name and last name into two different strings
-split_name = real_name.split(' ')
+#split_name = real_name.split(' ')
 
 #swap first name and last name 
-name_swap = split_name.reverse
+#name_swap = split_name.reverse
 
-p real_name
-p split_name
-p name_swap
+#p real_name
+#p split_name
+#p name_swap
 
 #join swapped name together with space in between
-reverse_name = name_swap.join(' ')
-p reverse_name
+#reverse_name = name_swap.join(' ')
+#p reverse_name
 
 #split reversed name into individual characters
-reverse_characters = reverse_name.split('')
-p reverse_characters
+#reverse_characters = reverse_name.split('')
+#p reverse_characters
 
 #set alias name equal to reversed name split into characters
-agent_alias = reverse_characters
+#agent_alias = reverse_characters
 
-agent_alias
+#agent_alias
 
 #change vowels and consonants
 
