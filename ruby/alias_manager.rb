@@ -1,5 +1,5 @@
 #Ask for user's real name
-puts "what is your name?"
+puts "Hello, Agent. Please enter your name."
 real_name = gets.chomp
 
 #split first name and last name into two different strings
