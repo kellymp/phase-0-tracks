@@ -2,6 +2,7 @@
 def real_to_alias(real_name)
 	real_name = real_name.split(' ')
 	real_name = real_name.reverse!
+	real_name = real_name.join(' ')
 end
 
 #write method to advance vowel to next in alphabet and create edge cases for a & u
