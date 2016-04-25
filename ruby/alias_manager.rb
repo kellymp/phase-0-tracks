@@ -20,7 +20,7 @@ end
 		end
 	end
 
-	#write method to advance consonants to next in alphabet and create edge cases for b & z
+#write method to advance consonants to next in alphabet and create edge cases for b & z
 	def consonant_next(i)
 		consonants = "bBcCdDfFgGhHjJkKlLmMnNpPqQrRsStTvVwWxXyYzZ"
 		if i == "z"
@@ -44,12 +44,21 @@ alias_characters = real_to_alias(real_name)
 p alias_characters
 alias_characters = alias_characters.split('')
 p alias_characters
-p alias_characters.map! {|i| consonant_next(i)}
+
+alias_characters.map! do |i|
+	  if ["a", "e", "i" ,"o", "u"].include? i
+	    vowel_next(i)
+	  else
+	    consonant_next(i)
+	  end 
+end
+
+p alias_characters
 
 #create loop for interface until user enters "quit"
 #fix loop
 #until gets.chomp == "quit"
-#	puts "Please enter your name. Enter 'quit' to exit."
+#	puts "Please enter your name. En ter 'quit' to exit."
 #end
 
 #split first name and last name into two different strings
