@@ -1,6 +1,7 @@
 #Release 0
 #create a method to:
 #split first name and last name into two different strings
+
 #name.split(' ')
 #swap first name and last name using reverse!
 #split the characters in first name and last name
@@ -12,12 +13,14 @@
 
 #Release 1 Interface
 #Ask for user's real name
-puts "What is your name?"
+puts "Enter your name:"
 real_name = gets.chomp
+split_name = real_name.split(' ')
+
 #return fake name
 #create loop for interface until user enters "quit"
 until gets.chomp == "quit"
-	puts "what is your name?"
+	puts "Enter your name. Type quit when you are done."
 end
 
 #Release 2 Store aliases
