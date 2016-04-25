@@ -18,6 +18,9 @@ end
 
 p name_swap
 
+p name_swap.join
+
+
 #split the characters in first name and last name
 #create edge cases for a & u, b & z
 #change vowels to next in line using .next
