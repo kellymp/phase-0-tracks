@@ -1,40 +1,72 @@
-#Ask for user's real name
-puts "what is your name?"
-real_name = gets.chomp
+#write method to split, swap, and rejoin first and last name
+def real_to_alias(real_name)
+	real_name = real_name.split(' ')
+	real_name = real_name.reverse!
+	real_name = real_name.join(' ')
+end
 
-#split first name and last name into two different strings
-split_name = real_name.split(' ')
+#write method to advance vowel to next in alphabet and create edge cases for a & u
+	def vowel_next(i)
+		vowels = "aAeEiIoOuU"
+		if i == "u"
+			i = "a"
+		elsif i == "U"
+			i = "A"
+		elsif i == " "
+			i = " "
+		else 
+			i = vowels[vowels.index(i) +2]
+		end
+	end
 
-#swap first name and last name 
-name_swap = split_name.reverse
+#write method to advance consonants to next in alphabet and create edge cases for b & z
+	def consonant_next(i)
+		consonants = "bBcCdDfFgGhHjJkKlLmMnNpPqQrRsStTvVwWxXyYzZ"
+		if i == "z"
+			i = "b"
+		elsif i == "Z"
+			i == "B"
+		elsif i == " "
+			i = " "
+		else
+			i = consonants[consonants.index(i) +2]
+		end
+	end
 
-p real_name
-p split_name
-p name_swap
+#create hash to store spy name and alias
+database = { }
 
-#join swapped name together with space in between
-reverse_name = name_swap[0] + " " + name_swap[1]
+#ask for user's real name
+puts "Hello, Agent."
+real_name = " "
 
-p reverse_name
-
-reverse_characters = reverse_name.split('')
-
-p reverse_characters
-
-#split the characters in first name and last name
-#create edge cases for a & u, b & z
-#change vowels to next in line using .next
-#change consonants to next in line using .next
-#join the letters back together to complete fake_name
-
-
-#Release 1 Interface
-
-#return fake name
 #create loop for interface until user enters "quit"
-#until gets.chomp == "quit"
-#	puts "Enter your name. Type quit when you are done."
-#end
+until real_name == "quit"
+puts "Please enter your name. Enter 'quit' to exit."
+real_name = gets.chomp
+#implement method to split, swap and rejoin first and last name
+	alias_characters = real_to_alias(real_name)
+#split first and last name into characters
+	alias_characters = alias_characters.split('')
+#implement method to change vowels and consonants to next respective letter
+	alias_characters.map! do |i|
+		  if ["a", "e", "i" ,"o", "u"].include? i
+		    vowel_next(i)
+		  else
+		    consonant_next(i)
+		  end 
+	end
+#rejoin characters to create alias first and last name
+alias_name = alias_characters.join('')
+#return fake name
+	puts "Your alias is #{alias_name}"
+
+#database.each do 
+
+#p database{}
+end
+
+
 
 #Release 2 Store aliases
 #use array to store fake names enetered into interface
