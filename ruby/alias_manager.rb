@@ -1,5 +1,5 @@
 #Ask for user's real name
-puts "Hello, Agent. Please enter your name."
+puts "Hello, Agent. Please enter your name. Enter 'quit' to exit."
 real_name = gets.chomp
 
 #split first name and last name into two different strings
@@ -41,7 +41,7 @@ def consonant_next(i)
 		i == "B"
 	else
 		i = consonants[consonants.index(i) +=2]
-
+end
 
 #return fake name
 #create loop for interface until user enters "quit"
