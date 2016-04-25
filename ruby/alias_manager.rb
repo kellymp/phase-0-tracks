@@ -36,31 +36,29 @@ end
 
 
 #Ask for user's real name
-puts "Hello, Agent. Please enter your name. Enter 'quit' to exit."
+puts "Hello, Agent."
+real_name = " "
+until real_name == "quit"
+puts "Please enter your name. Enter 'quit' to exit."
 real_name = gets.chomp
 
-p real_to_alias(real_name)
-alias_characters = real_to_alias(real_name)
-p alias_characters
-alias_characters = alias_characters.split('')
-p alias_characters
-
-alias_characters.map! do |i|
-	  if ["a", "e", "i" ,"o", "u"].include? i
-	    vowel_next(i)
-	  else
-	    consonant_next(i)
-	  end 
+	alias_characters = real_to_alias(real_name)
+	alias_characters = alias_characters.split('')
+	alias_characters.map! do |i|
+		  if ["a", "e", "i" ,"o", "u"].include? i
+		    vowel_next(i)
+		  else
+		    consonant_next(i)
+		  end 
+	end
+	alias_characters = alias_characters.join('')
+	p alias_characters
 end
 
-p alias_characters
-p alias_characters.join('')
+
 
 #create loop for interface until user enters "quit"
-#fix loop
-#until gets.chomp == "quit"
-#	puts "Please enter your name. En ter 'quit' to exit."
-#end
+
 
 #split first name and last name into two different strings
 #split_name = real_name.split(' ')
