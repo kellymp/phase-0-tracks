@@ -12,7 +12,12 @@ p real_name
 p split_name
 p name_swap
 
-#swap first name and last name using reverse!
+name_swap.map! do |letter|
+	p letter.split('')
+end
+
+p name_swap
+
 #split the characters in first name and last name
 #create edge cases for a & u, b & z
 #change vowels to next in line using .next
