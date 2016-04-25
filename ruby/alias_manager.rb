@@ -29,7 +29,8 @@ def vowel_next(i)
 	elsif i == "U"
 		i = "A"
 	else 
-		i = vowels[vowels.index(i) +=2]
+		i = vowels[vowels.index(i) +2]
+	end
 end
 
 #write method to advance consonants to next in alphabet and create edge cases for b & z
@@ -40,8 +41,10 @@ def consonant_next(i)
 	elsif i == "Z"
 		i == "B"
 	else
-		i = consonants[consonants.index(i) +=2]
+		i = consonants[consonants.index(i) +2]
+	end
 end
+
 
 #return fake name
 #create loop for interface until user enters "quit"
