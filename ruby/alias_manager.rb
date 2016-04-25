@@ -6,32 +6,41 @@ def real_to_alias(real_name)
 end
 
 #write method to advance vowel to next in alphabet and create edge cases for a & u
-def vowel_next(i)
-	vowels = "aAeEiIoOuU"
-	if i == "u"
-		i = "a"
-	elsif i == "U"
-		i = "A"
-	else 
-		i = vowels[vowels.index(i) +2]
-	end
-end
 
-#write method to advance consonants to next in alphabet and create edge cases for b & z
-def consonant_next(i)
-	consonants = "bBcCdDfFgGhHjJkKlLmMnNpPqQrRsStTvVwWxXyYzZ"
-	if i == "z"
-		i = "b"
-	elsif i == "Z"
-		i == "B"
-	else
-		i = consonants[consonants.index(i) +2]
+	def vowel_next(i)
+		vowels = "aAeEiIoOuU"
+		if i == "u"
+			i = "a"
+		elsif i == "U"
+			i = "A"
+		else 
+			i = vowels[vowels.index(i) +2]
+		end
 	end
-end
+
+	#write method to advance consonants to next in alphabet and create edge cases for b & z
+	def consonant_next(i)
+		consonants = "bBcCdDfFgGhHjJkKlLmMnNpPqQrRsStTvVwWxXyYzZ"
+		if i == "z"
+			i = "b"
+		elsif i == "Z"
+			i == "B"
+		else
+			i = consonants[consonants.index(i) +2]
+		end
+	end
+
 
 #Ask for user's real name
 puts "Hello, Agent. Please enter your name. Enter 'quit' to exit."
 real_name = gets.chomp
+
+p real_to_alias(real_name)
+alias_characters = real_to_alias(real_name)
+p alias_characters
+alias_characters = alias_characters.split('')
+p alias_characters
+p alias_characters.map! {|i| consonant_next(i)}
 
 #create loop for interface until user enters "quit"
 #fix loop
