@@ -13,6 +13,8 @@ end
 			i = "a"
 		elsif i == "U"
 			i = "A"
+		elsif i == " "
+			i = " "
 		else 
 			i = vowels[vowels.index(i) +2]
 		end
@@ -25,6 +27,8 @@ end
 			i = "b"
 		elsif i == "Z"
 			i == "B"
+		elsif i == " "
+			i = " "
 		else
 			i = consonants[consonants.index(i) +2]
 		end
