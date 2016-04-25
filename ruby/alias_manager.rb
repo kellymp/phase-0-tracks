@@ -1,8 +1,17 @@
-#Release 0
-#create a method to:
-#split first name and last name into two different strings
+#Ask for user's real name
+puts "what is your name?"
+real_name = gets.chomp
 
-#name.split(' ')
+#split first name and last name into two different strings
+split_name = real_name.split(' ')
+
+#swap first name and last name 
+name_swap = split_name.reverse
+
+p real_name
+p split_name
+p name_swap
+
 #swap first name and last name using reverse!
 #split the characters in first name and last name
 #create edge cases for a & u, b & z
@@ -12,19 +21,15 @@
 
 
 #Release 1 Interface
-#Ask for user's real name
-puts "Enter your name:"
-real_name = gets.chomp
-split_name = real_name.split(' ')
 
 #return fake name
 #create loop for interface until user enters "quit"
-until gets.chomp == "quit"
-	puts "Enter your name. Type quit when you are done."
-end
+#until gets.chomp == "quit"
+#	puts "Enter your name. Type quit when you are done."
+#end
 
 #Release 2 Store aliases
 #use array to store fake names enetered into interface
-spy_alias_database = {} #hash to store real name and alias together
-p spy_alias_database
+#spy_alias_database = {} #hash to store real name and alias together
+#p spy_alias_database
 #print all data entered when user quits program
