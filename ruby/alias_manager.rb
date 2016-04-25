@@ -15,11 +15,11 @@ p name_swap
 #join swapped name together with space in between
 reverse_name = name_swap[0] + " " + name_swap[1]
 
-#name_swap.map! do |letter|
-#	p letter.split('')
-#end
-
 p reverse_name
+
+reverse_characters = reverse_name.split('')
+
+p reverse_characters
 
 #split the characters in first name and last name
 #create edge cases for a & u, b & z
