@@ -14,6 +14,16 @@ class Santa
 	def eat_milk_and_cookies(cookie)
 		puts "That was a good #{cookie}!"
 	end
+
+	def celebrate_birthday(current_age)
+		@age += 1
+	end
+
+	def get_mad_at(reindeer)
+		current_ranking = @reindeer_ranking.index(reindeer)
+		@reindeer_ranking.insert(-1, reindeer)
+		@reindeer_ranking.delete_at(current_ranking)
+	end
 end
 
 santa = Santa.new(@gender, @ethnicity)
@@ -39,7 +49,4 @@ genders.length.times do |i|
 	 puts "Creating a #{genders[i]} #{ethnicities[i]} Santa ..."
 	santas << Santa.new(genders[i], ethnicities[i])
 end
-
-
-
 
