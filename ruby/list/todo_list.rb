@@ -1,11 +1,9 @@
 class TodoList
-	def initialize(item_1, item_2)
-		@item_1 = item_1
-		@item_2 = item_2
+	def initialize(list)
+		@list = list
 	end
 
 	def get_items 
-		list = []
-		list<< @item_1 << @item_2
+		p @list
 	end
 end
