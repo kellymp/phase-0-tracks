@@ -1,6 +1,9 @@
 class Santa
-	def initialize
+	def initialize(gender, ethnicity, age)
 		puts "Initializing santa instance..."
+		@gender = gender
+		@ethnicity = ethnicity
+		@age = age
 	end
 
 	def speak
