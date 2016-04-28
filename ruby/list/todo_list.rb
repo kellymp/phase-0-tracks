@@ -6,4 +6,8 @@ class TodoList
 	def get_items 
 		p @list
 	end
+
+	def add_item(item)
+	 	@list << item
+	end
 end
