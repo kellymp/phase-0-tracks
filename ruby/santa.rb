@@ -24,6 +24,20 @@ class Santa
 		@reindeer_ranking.insert(-1, reindeer)
 		@reindeer_ranking.delete_at(current_ranking)
 	end
+
+#setter method
+	def gender=(new_gender)
+		@gender = new_gender
+	end
+
+#Getter methods
+	def age
+		@age
+	end
+
+	def ethnicity
+		@ethnicity
+	end
 end
 
 santa = Santa.new(@gender, @ethnicity)
