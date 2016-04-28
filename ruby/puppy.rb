@@ -1,7 +1,7 @@
-#Species
+#Species-------------------------
 #Cavalier King Charles Spaniel
 
-#Characteristics
+#Characteristics-----------------
 #Group: Toy Dogs
 #Weight: 13 - 18 lbs
 #Lifespan: 9 - 14 years
@@ -9,6 +9,11 @@
 #Color: Blenheim, black & tan, ruby, or tri-color
 #Hypoallergenic: No
 
-
-#Behavior
+#Behavior-----------------------
+#Sit
+#Stay
+#Shake
+#Fetch
+#Kiss
+#Rollover
 
