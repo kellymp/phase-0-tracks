@@ -62,9 +62,6 @@ end
 #santas << Santa.new('gender fluid', 'Mystical Creature (unicorn)')
 #santas << Santa.new('N/A', 'N/A')
 
-
-
-
 #add some diverse initializations
 santas = []
 example_genders = ["agender", "female", "male", "bigender", "female", "gender fluid", "N/A"]
