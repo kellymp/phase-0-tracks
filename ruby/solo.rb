@@ -8,6 +8,9 @@
 
 class Vespa
 
+	attr_accessor 
+	attr_reader 
+
 #initialize class and add attributes
 	def initialize(color,scooter_name)
 		@color = color
@@ -17,7 +20,7 @@ class Vespa
 
 #method for speeding up the vespa
 	def speed_up(speed)
-		puts "Vrooom! The Vespa is now going #{speed}mph!"
+		puts "Vrooom! The Vespa is now going #{speed} mph!"
 	end
 
 #method for honking the horn
@@ -31,6 +34,14 @@ class Vespa
 	end
 end
 
-p Vespa.speed_up(40)
-p Vespa.honk(5)
-p Vespa.slam_breaks
+
+#add user interface 
+#ask user how many vespas they would like to test drive to create loop
+puts "How many Vespas would you like to test drive?"
+test_drives = gets.chomp
+
+test_drives.times do 
+end
+
+
+
