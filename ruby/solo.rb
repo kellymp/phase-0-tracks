@@ -44,8 +44,10 @@ end
 #add user interface 
 puts "Welcome to the factory! Lets build your scooter!"
 
+#create array to store instances
 vespas = []
 
+#create loop until user chooses to exit
 preference = ' '
 while preference != "exit"
 	puts "What color would you like to paint your scooter?"
@@ -61,6 +63,7 @@ while preference != "exit"
 	preference = gets.chomp
 end 
 
+#print out the attributes of each instance
 vespas.each do |scooter|
 	scooter.product_details
 	puts "lets go for a test drive!"
