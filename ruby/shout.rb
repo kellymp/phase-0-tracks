@@ -4,6 +4,9 @@ module Shout
 	end
 
 	def self.yelling_happily(words)
-		words + "!!!!!!" + ":)"
+		words + "!!!!!!" + " :)"
 	end
 end
+
+p Shout.yelling_happily("HELLOOOOOOO WOOOOORRRRLLLLD")
+p Shout.yell_angrily("I am very tired")
