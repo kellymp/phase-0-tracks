@@ -36,7 +36,7 @@ class Scooter
 
 #method for printing out the details of the users creation
 	def product_details
-		puts "Your #{@brand} scooter named #{@name} is #{@color} with a #{motor} engine!"
+		puts "Your #{@brand} scooter named #{@name} is #{@color} with a #{@motor} engine!"
 	end
 end
 
@@ -61,7 +61,9 @@ while preference != "exit"
 	preference = gets.chomp
 end 
 
-scooter.each do |scooter|
+puts "lets go for a test drive!"
+
+vespas.each do |scooter|
 	scooter.product_details
 end
 
