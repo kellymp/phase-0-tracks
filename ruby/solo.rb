@@ -1,21 +1,22 @@
-#create vespa class
-#create attributes: color, scooter name, motor size
+#create scooter class
+#create attributes: color, scooter name, fuel level
 #create methods:
 # initailize  
 # speed up method that takes an integer (speed) as its arguments
 # honk method that honks the number of times specified by the arguments
 # slam on the breaks method 
 
-class Vespa
+class Scooter
 
-	attr_accessor 
-	attr_reader 
+	attr_accessor :color, :name
+	attr_reader :motor_size, :brand
 
 #initialize class and add attributes
 	def initialize(color,scooter_name)
 		@color = color
 		@name = scooter_name
-		@motor_size = motor_size
+		@motor = "turbo charged"
+		@brand = "Vespa"
 	end
 
 #method for speeding up the vespa
@@ -32,16 +33,40 @@ class Vespa
 	def slam_breaks
 		puts "SQEEEEEEEEEEEE! The Vespa has stopped!"
 	end
+
+#method for printing out the details of the users creation
+	def product_details
+		puts "Your #{@brand} scooter named #{@name} is #{@color} with a #{motor} engine!"
+	end
 end
 
 
 #add user interface 
-#ask user how many vespas they would like to test drive to create loop
-puts "How many Vespas would you like to test drive?"
-test_drives = gets.chomp
+puts "Welcome to the factory! Lets build your scooter!"
 
-test_drives.times do 
+vespas = []
+
+preference = ' '
+while preference != "exit"
+	puts "What color would you like to paint your scooter?"
+	color = gets.chomp
+
+	puts "What would you like to name your scooter?"
+	name = gets.chomp
+
+	scooter = Scooter.new(color, name)
+	vespas << scooter
+
+	puts "Would you like to build another scooter? Type 'exit' if you are done."
+	preference = gets.chomp
+end 
+
+scooter.each do |scooter|
+	scooter.product_details
 end
+
+
+
 
 
 
