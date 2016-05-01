@@ -61,14 +61,15 @@ while preference != "exit"
 	preference = gets.chomp
 end 
 
-puts "lets go for a test drive!"
-
 vespas.each do |scooter|
 	scooter.product_details
+	puts "lets go for a test drive!"
+	speed = rand(70)
+	times = rand(7)
+	scooter.speed_up(speed)
+	scooter.honk(times)
+	scooter.slam_breaks
 end
 
-
-
-
-
+puts "Thanks for choosing the Vespa factory! Drive safe!"
 
