@@ -20,13 +20,13 @@ end
 
 list = grocery_items("carrots apples cereal pizza")
 
-
 # Method to add an item to a list
 # input: item name and optional quantity
 # steps: set a new key with its value to the hash
 # output: print the grocery list hash with the new item
 
 def add_item(list, item)
+        
         list[item] = 1
         p list
 end
@@ -69,3 +69,14 @@ def print_list(list)
 end
 
 print_list(list)
+
+#release 3
+
+
+list2 = grocery_items("Lemonade tomatoes onions icecream")
+update_quantity(list2, "Lemonade", 2) 
+update_quantity(list2, "tomatoes", 3)
+update_quantity(list2, "icecream", 4)
+remove_item(list2, "Lemonade")
+update_quantity(list2, "icecream", 1)
+print_list(list2)
