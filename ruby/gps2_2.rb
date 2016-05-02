@@ -80,3 +80,8 @@ update_quantity(list2, "icecream", 4)
 remove_item(list2, "Lemonade")
 update_quantity(list2, "icecream", 1)
 print_list(list2)
+
+#I learned that it is important to pseudocode your entire program before begining to write any of the code portion. This way you can have a clear understanding of what you want your program to do and how youre going to do it. It is also super helpful to make your pseudocode as detailed as possible so that it is easier when it comes to actually writing your code
+#When we split the string into individual items it created an array which made it easier to pass the items into the hash we created to store the grocery items and their quantities. We chose to go with a hash to store the grocery list because it allows us to enter both a key(the item) and a value associated with that key(the quantity of the item)
+#in this challenge we passed the hash itself into a method as an argument by creating the variable "list" and setting it equal to our hash of specific grocery items and this is how we were able to pass information between items. Before doing so, our hash with the grocery items/quantities stored inside were not accessible to the other methods.
+# this challenge definitely cleared up a lot of the issues i had with hashes and arrays. There were several concepts I was familiar with but did not feel entirely comfortable with or that I full grasped. I feel much more confident with this now. 
