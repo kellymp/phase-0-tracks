@@ -14,8 +14,10 @@ console.log(reverseString("michelle"))
 console.log(reverseString("michelle kelly"))
 console.log(reverseString("coding is fun"))
 
-//print the variable if some condition is true - NOT WORKING
-//for (var i = 2; i = 2) {
-//	console.log(reverseString("testing testing"))
-//	console.log(reverseString("abcdefghijklmnopqrstuvwxyz"))
-//}
+//print the variable if some condition is true using an if/else statement
+//set reverseString equal to a variable to use in the if/else statement
+
+var stringReversed = reverseString
+if (stringReversed == stringReversed) { 
+	console.log(stringReversed);
+}
