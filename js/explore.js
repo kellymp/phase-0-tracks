@@ -1,15 +1,7 @@
-//reverse a string
-	// create a method that takes a string as parameters 
-	//split the string to prepare it to be reversed
-	//reverse the split string
-	//rejoin the string together
-	//print the reversed sting to the console
-
-function reverseString(string) {
-	string.split('');
-	string.reverse();
-	string.join('');
-	return string;
-	}
+//create a method to reverse a string
+	//split string turning it into an array 
+	//reverse string array
+	//join the split string
+	//print the string backwards
 
 reverseString("michelle")
