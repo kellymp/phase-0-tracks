@@ -7,7 +7,7 @@
 //define method that takes a string as a parameter
 function reverseString(string) {
 	//split the string turning it into an array
-	return string.split('');
+	return string.split('').reverse().join('');
 }
 
-reverseString("michelle")
+console.log(reverseString("michelle"))
