@@ -15,7 +15,7 @@ function reverseString(string) {
 	}
 }
 
-console.log(reverseString("michelle"))
-console.log(reverseString("michelle kelly"))
-console.log(reverseString("coding is fun"))
+console.log(reverseString("michelle"));
+console.log(reverseString("michelle kelly"));
+console.log(reverseString("coding is fun"));
 
