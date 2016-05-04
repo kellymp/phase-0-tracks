@@ -11,7 +11,7 @@ function reverseString(string) {
 
 	//print the variable if the specidied condition is true using an if statement
 	if (stringReversed == stringReversed) { 
-		console.log(stringReversed);
+		return stringReversed;
 	}
 }
 
