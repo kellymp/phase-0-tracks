@@ -1,3 +1,10 @@
+//create a method to reverse a string
+	//use a for loop to print the string backwards using the index of the string 
+
+//define method that takes a string as a parameter
+function reverseString(string) {
+	
+}
 
 
 // The below method uses built in methods
