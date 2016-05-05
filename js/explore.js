@@ -1,9 +1,14 @@
 //create a method to reverse a string
-	//use a for loop to print the string backwards using the index of the string 
+	//use a for loop to print the string backwards using the string length and index
+	//assign a new index to each letter of the string to print reversed 
 
 //define method that takes a string as a parameter
 function reverseString(string) {
-	
+	var stringReversed = '';
+	//for loop to reverse 
+	for (var i = string.length -1; i >= 0; i--)
+		stringReversed =+ string[i];
+	return stringReversed;
 }
 
 
