@@ -12,10 +12,18 @@ function reverseString(string) {
 	return stringReversed;
 }
 
+// add driver code that calls the reverseString function
 console.log(reverseString("michelle"));
 console.log(reverseString("michelle kelly"));
 console.log(reverseString("coding is fun"));
 
+//add driver code that store the results of the function in a variable 
+var results = reverseString('hello world!')
+
+//add driver code that prints stringReversed if 1=1 
+if (1==1) {
+	console.log(results);
+}
 
 //---------------------------------------------------------
 // The below method uses built in methods
