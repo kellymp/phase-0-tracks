@@ -7,12 +7,19 @@ function reverseString(string) {
 	var stringReversed = '';
 	//for loop to reverse 
 	for (var i = string.length -1; i >= 0; i--)
-		stringReversed =+ string[i];
+		//move the charcter at an index to the end and set stringReversed equal to this new string
+		stringReversed += string[i];
 	return stringReversed;
 }
 
+console.log(reverseString("michelle"));
+console.log(reverseString("michelle kelly"));
+console.log(reverseString("coding is fun"));
 
+
+//---------------------------------------------------------
 // The below method uses built in methods
+
 //create a method to reverse a string
 	//split string turning it into an array 
 	//reverse string array
