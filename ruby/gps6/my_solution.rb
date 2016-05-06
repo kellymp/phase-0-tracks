@@ -18,7 +18,6 @@ class VirusPredictor
   end
 # return the next two methods
   
-  
   def virus_effects
     predicted_deaths
     speed_of_spread
@@ -26,6 +25,8 @@ class VirusPredictor
 
  private 
   
+
+# Charlotte's example of how cases work: 
 # case temp
 #   when cold
 #     wear a coat
@@ -67,6 +68,7 @@ class VirusPredictor
         number_of_deaths = (@population * 0.05).floor
     end
 
+#we can remove this and have it print within virus_effects so that this method does one thing
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
   end
@@ -89,6 +91,7 @@ class VirusPredictor
       speed += 2.5
     end
 
+#we can remove this and have it print within virus_effects so that this method does one thing
     puts " and will spread across the state in #{speed} months.\n\n"
 
   end
@@ -100,16 +103,16 @@ end
 # DRIVER CODE
  # initialize VirusPredictor for each state
 
-#STATE_DATA.each do |state_name, pop|
-#state = VirusPredictor.new(state_name, STATE_DATA[state_name][:population_density], STATE_DATA[state_name][:population])
-#state.virus_effects
-#end
+STATE_DATA.each do |state_name, pop|
+state = VirusPredictor.new(state_name, STATE_DATA[state_name][:population_density], STATE_DATA[state_name][:population])
+state.virus_effects
+end
   
-jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
-jersey.virus_effects
+#jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
+#jersey.virus_effects
 #
-california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population])
-california.virus_effects
+#california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population])
+#california.virus_effects
 #
 #alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 #alaska.virus_effects
