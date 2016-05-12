@@ -77,4 +77,8 @@ revision = gets.chomp
 	end
 
 #print the updated hash and exit program
-
+puts "-------------------------------"
+puts "Client Information:"
+print client
+puts
+puts "-------------------------------"
