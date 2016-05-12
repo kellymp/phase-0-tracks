@@ -46,6 +46,7 @@ puts "-------------------------------"
 
 #use if statement to give user the opportunity to update any key/value pairs
 puts "Enter any category you would like to edit."
+puts "Categories: name, address, rooms, aesthetic, palette, project length"
 puts "If all information is correct enter 'none'."
 revision = gets.chomp
 	if revision == "name"
