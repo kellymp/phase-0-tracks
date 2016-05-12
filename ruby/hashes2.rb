@@ -1,5 +1,5 @@
 #create an empty array to store client data
-
+client = {}
 #prompt user for the following data: 
 #name (string)
 #address (string)
