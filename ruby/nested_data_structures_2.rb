@@ -40,3 +40,11 @@ grocery_store = {
 		]
 	}
 }
+
+
+#driver code
+p grocery_store[:meat][:location]
+grocery_store[:dairy][:needs_restocking].push('coffee creamer')
+p grocery_store[:dairy][:needs_restocking]
+p grocery_store[:produce][:inventory]
+p grocery_store[:produce][:location].upcase
