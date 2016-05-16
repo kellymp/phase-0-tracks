@@ -19,7 +19,32 @@ sports = ["football", "soccer", "tennis", "volleyball"]
 captains = {
 	"Mark" => "football", 
 	"John" => "soccer",
-	"Brooke" => "tennis"
-	"Samantha" => "volleyball"
-	}
+	"Brooke" => "tennis",
+	"Samantha" => "volleyball"}
+
+#iterate through the array using .each to capitalize each word
+capitalized_sports = []
+
+sports.each do |sport|
+	capitalized_sports << sport.capitalize
+end
+
+#print array before and after
+puts "Array before using .each:"
+p sports
+puts "Array after using .each:"
+p capitalized_sports
+
+
+puts "Hash before using .each:"
+p captains
+
+#iterate through the array using .each to list who the captain is of each sport
+
+puts "Hash after using .each:"
+captains.each do |athlete, sport|
+	puts "#{athlete} is the captain of the #{sport} team!"
+end
+
+
 
