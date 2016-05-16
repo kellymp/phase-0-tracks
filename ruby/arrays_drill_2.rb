@@ -1,3 +1,8 @@
+#create a method that takes three items as parameters and returns them as an array
+def create_array(one, two, three)
+	return [one, two, three]
+end
+
 #initialize an empty array and store it in a variable
 array_one = Array.new
 # or array_one = {}
@@ -34,3 +39,6 @@ p array_two
 joined_arrays = array_one + array_two
 p joined_arrays
 
+#call create_array method
+p create_array(5, true, 'puppies')
+ 
