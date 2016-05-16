@@ -11,3 +11,26 @@ p array_one
 array_one.delete_at(2)
 p array_one
 
+#insert a new item at index 2 and print the array
+array_one.insert(2, true)
+p array_one
+
+#remove the first item of the array without having to refer to its index
+array_one.shift
+p array_one
+
+#ask the array if it includes a certain item and print results of this call method
+if array_one.include?('cheeseburger')
+	puts "This array includes the word 'cheeseburger'!"
+else
+	puts "This array does not include the word 'cheeseburger'!"
+end
+
+#initialize another array that already has few items in it
+array_two = ["kelly", 6, 7, true, "squirrel"]
+p array_two
+
+#add the two arrays together and store them in a new variable
+joined_arrays = array_one + array_two
+p joined_arrays
+
