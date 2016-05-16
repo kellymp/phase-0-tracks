@@ -40,11 +40,18 @@ puts "Hash before using .each:"
 p captains
 
 #iterate through the array using .each to list who the captain is of each sport
-
 puts "Hash after using .each:"
 captains.each do |athlete, sport|
 	puts "#{athlete} is the captain of the #{sport} team!"
 end
 
+#iterate through the array using .map! to make all letters uppercase
+puts "Array before using .map!:"
+p sports
 
+sports.map! do |sport|
+	sport.upcase
+end
 
+puts "Array after using .map!:"
+p sports
