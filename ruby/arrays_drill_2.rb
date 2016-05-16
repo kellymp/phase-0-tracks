@@ -26,4 +26,11 @@ else
 	puts "This array does not include the word 'cheeseburger'!"
 end
 
+#initialize another array that already has few items in it
+array_two = ["kelly", 6, 7, true, "squirrel"]
+p array_two
+
+#add the two arrays together and store them in a new variable
+joined_arrays = array_one + array_two
+p joined_arrays
 
