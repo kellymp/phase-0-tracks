@@ -52,5 +52,19 @@ class Duck
 
 end
 
+#create array to store new instance of duck class
 ducks = []
+i = 0
+
+#create loop to make 50 instances of duck class
+while i < 50
+	ducks << Duck.new
+	i += 1
+end
+
+#iterate over the duck array
+ducks.each do |duck| 
+	p duck.waddle
+	p duck.quack(4)
+end
 
