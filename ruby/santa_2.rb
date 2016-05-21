@@ -52,5 +52,12 @@ example_genders.length.times do |i|
 	santas << Santa.new(example_genders[i], example_ethnicities[i])
 end
 
+50.times do 
+	santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+	age = rand(140)
+	puts "This is a #{age} year old, #{santa.ethnicity} and #{santa.gender} Santa!"
+end
+
+
 
 
