@@ -7,3 +7,7 @@ class Puppy
 
 end
 
+Lola = Puppy.new
+Lola.fetch('ball')
+
+
