@@ -1,5 +1,8 @@
 class Santa
 
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
+
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance..."
 		@gender = gender
@@ -16,12 +19,26 @@ class Santa
 		puts "That was a good #{cookie} cookie!"
 	end
 
+#setter method
+#	def gender=(new_gender)
+#		@gender = new_gender
+#	end
+
+#getter method
+#	def age
+#		@age
+#	end
+
+#	def ethnicity
+#		@ethnicity
+#	end
+
 end
 
 #driver code to test out Santa class
-santa = Santa.new
-santa.speak
-santa.eat_milk_and_cookies('sugar')
+#santa = Santa.new
+#santa.speak
+#santa.eat_milk_and_cookies('sugar')
 
 #santas = []
 #santas << Santa.new('female', 'black')
@@ -35,4 +52,12 @@ example_genders.length.times do |i|
 	santas << Santa.new(example_genders[i], example_ethnicities[i])
 end
 
-	
+50.times do 
+	santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+	age = rand(140)
+	puts "This is a #{age} year old, #{santa.ethnicity} and #{santa.gender} Santa!"
+end
+
+
+
+
