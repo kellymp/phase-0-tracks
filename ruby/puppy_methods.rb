@@ -34,5 +34,23 @@ Lola.roll_over
 Lola.dog_years(5)
 Lola.shake
 
+#Release 2: Write your own
 
+class Duck
+
+	def initialize
+		puts "Initializing new duck method..."
+	end
+
+	def waddle
+		puts '*waddle waddle*' 
+	end
+
+	def quack(times)
+		puts '*Quack!*' * times
+	end
+
+end
+
+ducks = []
 
