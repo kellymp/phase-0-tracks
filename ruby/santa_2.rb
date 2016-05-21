@@ -16,6 +16,20 @@ class Santa
 		puts "That was a good #{cookie} cookie!"
 	end
 
+#setter method
+	def gender=(new_gender)
+		@gender = new_gender
+	end
+
+#getter method
+	def age
+		@age
+	end
+
+	def ethnicity
+		@ethnicity
+	end
+
 end
 
 #driver code to test out Santa class
@@ -35,4 +49,5 @@ example_genders.length.times do |i|
 	santas << Santa.new(example_genders[i], example_ethnicities[i])
 end
 
-	
+
+
