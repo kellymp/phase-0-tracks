@@ -15,6 +15,7 @@ class Santa
 end
 
 #driver code to test out Santa class
-Jolly = Santa.new
-Jolly.speak
-Jolly.eat_milk_and_cookies('sugar')
+santa = Santa.new
+santa.speak
+santa.eat_milk_and_cookies('sugar')
+
