@@ -61,8 +61,6 @@ def update_quant(name, item, quantity)
 end
 
 
-
-
 # Method to print a list and make it look pretty
 # input: name of the hash
 # steps:
@@ -83,3 +81,35 @@ add_item(@test,"Ice Cream", 4)
 remove_item(@test, "Lemonade")
 update_quant(@test, "Ice Cream", 1)
 print_list(@test)
+
+
+#reflection
+
+#I learned why pseudocoding is so important in this challenge. 
+#It is important to write good and detailed pseudocode so that when
+#it comes to writing the actual code for your program, you have a clear
+#understanding of what you are trying to accomplish and when your pseudocode
+#and it makes it much easier to actual write your code if you have detailed 
+#and clear pseudocoding.
+
+#for this challenge we used both an array and a hash. We decided a hash would be best 
+#because it allows us to store a key (the food item) and a value (the quantity of the food item).
+#when we entered a string of food items separated by spaces we chose the best option
+#would be to split the string, which then creates an array of the food items. We were then
+#able to set the array items as the keys of the hash and assign a defualt value of 1 to each.
+
+#a method returns the last variable executed. We ran into a problem with this when having 
+#our method print the hash at the end. We fixed this by removing the print and simply
+#having the hash be the last variable of the method so that it would return this"
+
+#methods can take many different things as arguments including, strings, booleans, integers,
+#arrays, hashes or even other methods.
+
+#in order to pass information between methods you can set information as variables that are
+#accessable on a global level. We had to do this in this challenge by setting the results of
+#our first method as a variable so that it could be accessed in our other methods.
+
+#After this challenge i feel much more comfortable with hashes and arrays and being able to 
+#use an array within a hash.
+
+
