@@ -16,3 +16,6 @@ function reverseString(string) {
 console.log(reverseString("michelle"));
 console.log(reverseString("michelle kelly"));
 console.log(reverseString("it's finally summer"));
+
+//add driver code that store the results of the function in a variable 
+var results = reverseString('hello world!')
