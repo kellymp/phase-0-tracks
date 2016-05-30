@@ -20,3 +20,7 @@ console.log(reverseString("it's finally summer"));
 //add driver code that store the results of the function in a variable 
 var results = reverseString('hello world!')
 
+//add driver code that prints the variable results if the condition (1=1) is true
+if (1==1) {
+	console.log(results);
+}
