@@ -70,3 +70,10 @@ console.log(compareObjects({name: "Steven", age: 30}, {name: "Steven", age: 54})
 console.log(arrayCreator(6))
 console.log(arrayCreator(10))
 console.log(arrayCreator(3))
+
+//generate 10 arrays that print the array and feed into longestPhraseFinder
+for (var a = 0; a<= 10; a++) {
+	var genArray = arrayCreator(Math.floor((Math.random() * 10) +1));
+	console.log(genArray);
+	return longestPhraseFinder(genArray);
+}
