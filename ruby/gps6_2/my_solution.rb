@@ -121,3 +121,22 @@ end
 
 #=======================================================================
 # Reflection Section
+
+#What are the differences between the two different hash syntaxes shown in the state_data file?
+#The hash is declared as a constant with the name STATE_DATA in all capital letters. This indicates that this data will remain unchanged. 
+#STATE_DATA is a hash with additional hashes nested inside. The name of each state serves as the key for the hash, and each nested hash serves as the key for the state values in the "overall" hash.
+#in the nested hashes, population_density and population are the keys and the corresponding numbers are the values for each key. 
+
+#What does require_relative do? How is it different from require?
+#require is used for requiring gems while require_relative is used for requiring code from other files in the program, making them accessible 
+
+#What are some ways to itertate through a hash?
+#In the above driver code we iterated through the hash using .each
+#other examples of ways to iterate include .times .map and using loops
+
+#When refactoring virus_effects, what stood out to you about the variable, if anything?
+#We noticed that the variables in the parameters @ was being used. Also the variables taken as parameters were not being used in the method so it was not necessary to have them. 
+
+#What concept did you most solidify in this challenge?
+#It definitely helped to cover private and actually be able to see how it affects the program
+#Also, require_relative vs require are not really explained well in any of the online resources I have come across so it was helpful to solidify a good understanding of these concepts.
