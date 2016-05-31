@@ -1,5 +1,4 @@
 //release 0
-
 //create a function that loops through an array of strings
 //and compares the length of each string to return the longest one
 
@@ -36,6 +35,26 @@ function compareObjects(object1, object2) {
  			return false
 }
 
+//release 2
+//create a function that takes an integer for length that returns an array of strings of the length
+//create an array to store words
+//continue to generate words until the length matches the number of words in the array 
+
+function arrayCreator(integer) {
+	
+	var wordArr = [];
+	var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+	var string = '';
+
+	while (wordArr.length < integer) {
+		for (var i=0; i < Math.floor(Math.random() * 10 + 1); i++) {
+			string += alphabet[Math.floor(Math.random() * 26)];
+		}
+		wordArr.push(string);
+		word = '';
+	}
+	return wordArr
+}		
 
 //driver code for phase 0
 longestPhraseFinder(["Michelle", "hello world", "heeeeeeeey", "its summertime", "yes"])
@@ -46,3 +65,15 @@ longestPhraseFinder(['blue', 'orange', 'magenta', 'citrus yellow', 'red'])
 console.log(compareObjects({name: "Steven", age: 54}, {name: "Tamir", age: 54}))
 console.log(compareObjects({name: "Steven", age: 35}, {name: "Tamir", age: 54}))
 console.log(compareObjects({name: "Steven", age: 30}, {name: "Steven", age: 54}))
+
+//driver code release 2
+console.log(arrayCreator(6))
+console.log(arrayCreator(10))
+console.log(arrayCreator(3))
+
+//generate 10 arrays that print the array and feed into longestPhraseFinder
+for (var a = 0; a<= 10; a++) {
+	var genArray = arrayCreator(Math.floor((Math.random() * 10) +1));
+	console.log(genArray);
+	return longestPhraseFinder(genArray);
+}
