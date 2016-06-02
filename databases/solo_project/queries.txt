@@ -18,7 +18,6 @@ SELECT * FROM dogs;
 2) Update an item that meets some condition:
 
 UPDATE dogs SET potty_trained='true' WHERE name='Moose';
-UPDATE dogs SET trainer_id= 4 WHERE name = 'Moose';
 
 3) Display the information in both tables using one query:
 
@@ -29,12 +28,26 @@ SELECT * FROM dogs, trainers WHERE trainers.id = dogs.trainer_id;
 4|Jinx|4|false|2|2|Michael|true
 5|Chip|4|true|3|3|Scott|false
 6|Cammie|10|true|1|1|Kim|true
-7|Moose|3|true|4|4|Kevin|false
+7|Moose|3|true|4|1|Kim|false
 8|Oliver Twister|5|true|3|3|Scott|false
 9|Barney|8|true|3|3|Scott|false
 10|Jimmy|3|flase|1|1|Kim|true
 
+4) Display a narrower selection of columns from both tables using one query:
 
+SELECT dogs.name, dogs.age, dogs.potty_trained, trainers.name, trainers.prior_experience FROM dogs, trainers WHERE trainers.id = dogs.trainer_id;
+Lola|5|true|Kim|true
+Scruffy|2|true|Michael|true
+Tybie|1|false|Michael|true
+Jinx|4|false|Michael|true
+Chip|4|true|Scott|false
+Cammie|10|true|Kim|true
+Moose|3|true|Kim|false
+Oliver Twister|5|true|Scott|false
+Barney|8|true|Scott|false
+Jimmy|3|flase|Kim|true
 
+5) Delete an item that meets some condition:
 
+DELETE FROM trainers WHERE name ='Kevin';
 
