@@ -1,0 +1,23 @@
+Release 2
+Paste both the command and the output (if any)
+
+1) Display the information in one table:
+
+SELECT * FROM dogs;
+1|Lola|5|true|Kim
+2|Scruffy|2|true|Michael
+3|Tybie|1|false|Michael
+4|Jinx|4|false|Michael
+5|Chip|4|true|Scott
+6|Cammie|10|false|Kim
+7|Moose|3|true|Kim
+8|Oliver Twister|5|true|Scott
+9|Barney|8|true|Scott
+10|Jimmy|3|false|Kim
+sqlite> 
+
+2) Update an item that meets some condition:
+
+UPDATE dogs SET potty_trained='true' WHERE name='Cammie';
+
+3) Display the information in both tables using one query:
