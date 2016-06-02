@@ -4,20 +4,50 @@ Paste both the command and the output (if any)
 1) Display the information in one table:
 
 SELECT * FROM dogs;
-1|Lola|5|true|Kim
-2|Scruffy|2|true|Michael
-3|Tybie|1|false|Michael
-4|Jinx|4|false|Michael
-5|Chip|4|true|Scott
-6|Cammie|10|false|Kim
-7|Moose|3|true|Kim
-8|Oliver Twister|5|true|Scott
-9|Barney|8|true|Scott
-10|Jimmy|3|false|Kim
-sqlite> 
+1|Lola|5|true|1
+2|Scruffy|2|true|2
+3|Tybie|1|false|2
+4|Jinx|4|false|2
+5|Chip|4|true|3
+6|Cammie|10|true|1
+7|Moose|3|false|1
+8|Oliver Twister|5|true|3
+9|Barney|8|true|3
+10|Jimmy|3|flase|1
 
 2) Update an item that meets some condition:
 
-UPDATE dogs SET potty_trained='true' WHERE name='Cammie';
+UPDATE dogs SET potty_trained='true' WHERE name='Moose';
 
 3) Display the information in both tables using one query:
+
+SELECT * FROM dogs, trainers WHERE trainers.id = dogs.trainer_id;
+1|Lola|5|true|1|1|Kim|true
+2|Scruffy|2|true|2|2|Michael|true
+3|Tybie|1|false|2|2|Michael|true
+4|Jinx|4|false|2|2|Michael|true
+5|Chip|4|true|3|3|Scott|false
+6|Cammie|10|true|1|1|Kim|true
+7|Moose|3|true|4|1|Kim|false
+8|Oliver Twister|5|true|3|3|Scott|false
+9|Barney|8|true|3|3|Scott|false
+10|Jimmy|3|flase|1|1|Kim|true
+
+4) Display a narrower selection of columns from both tables using one query:
+
+SELECT dogs.name, dogs.age, dogs.potty_trained, trainers.name, trainers.prior_experience FROM dogs, trainers WHERE trainers.id = dogs.trainer_id;
+Lola|5|true|Kim|true
+Scruffy|2|true|Michael|true
+Tybie|1|false|Michael|true
+Jinx|4|false|Michael|true
+Chip|4|true|Scott|false
+Cammie|10|true|Kim|true
+Moose|3|true|Kim|false
+Oliver Twister|5|true|Scott|false
+Barney|8|true|Scott|false
+Jimmy|3|flase|Kim|true
+
+5) Delete an item that meets some condition:
+
+DELETE FROM trainers WHERE name ='Kevin';
+
