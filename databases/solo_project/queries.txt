@@ -21,3 +21,18 @@ sqlite>
 UPDATE dogs SET potty_trained='true' WHERE name='Cammie';
 
 3) Display the information in both tables using one query:
+
+SELECT * FROM dogs, trainers WHERE trainers.name = dogs.trainer_name;
+1|Lola|5|true|Kim|1|Kim|false
+2|Scruffy|2|true|Michael|2|Michael|true
+3|Tybie|1|false|Michael|2|Michael|true
+4|Jinx|4|false|Michael|2|Michael|true
+5|Chip|4|true|Scott|3|Scott|true
+6|Cammie|10|true|Kim|1|Kim|false
+7|Moose|3|true|Kim|1|Kim|false
+8|Oliver Twister|5|true|Scott|3|Scott|true
+9|Barney|8|true|Scott|3|Scott|true
+10|Jimmy|3|false|Kim|1|Kim|false
+
+
+
