@@ -43,14 +43,24 @@ db.execute(create_orders)
 #add test order
 #db.execute("INSERT INTO orders (item, quantity, customer, shipped) VALUES ('white sneakers', 1, 5, 'false')")
 
-#create method to add multiple customers to the customers table
+#create method to add customer to the customers table
 def add_customers(db, name, email, phone, address, city, state, zip)
 	db.execute("INSERT INTO customers (name, email, phone, address, city, state, zip) VALUES (?, ?, ?, ?, ?, ?, ?)", [name, email, phone, address, city, state, zip])
 end
 
-#create method to add multiple orders to the orders table
+#create method to delete a customer from the customer table
+def delete_customers(db, name)
+	db.execute("DELETE FROM customers WHERE name = ?", [name])
+end
+
+#create method to add order to the orders table
 def add_orders(db, item, quantity, customer, shipped)
 	db.execute("INSERT INTO orders (item, quantity, customer, shipped) VALUES (?, ?, ?, ?)", [item, quantity, customer, shipped])
+end
+
+#create method to cancel an order and delete from the orders table
+def cancel_order(db, id)
+	db.execute("DELETE FROM orders WHERE id = ?", [id])
 end
 
 #add values to customers table
@@ -64,5 +74,5 @@ end
 #	add_orders(db, Faker::Commerce.product_name, Faker::Number.between(1, 10), Faker::Number.between(1, 30), Faker::Boolean.boolean(0.7))
 #end
 
-
+#create method to 
 
