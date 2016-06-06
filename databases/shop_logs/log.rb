@@ -7,7 +7,7 @@ db = SQLite3::Database.new("store_log.db")
 
 #create customer_info table
 create_customer_cmd = <<-SQL
-	CREATE TABLE IF NOT EXISTS customers (
+	CREATE TABLE IF NOT EXISTS customers(
 		id INTEGER PRIMARY KEY,
 		name VARCHAR (255),
 		address VARCHAR (255),
@@ -23,7 +23,7 @@ SQL
 
 #create orders table
 create_orders_table_cmd = <<-SQL
-	CREATE TABLE IF NOT EXISTS orders (
+	CREATE TABLE IF NOT EXISTS orders(
 		id INTEGER PRIMARY KEY,
 		item VARCHAR (255),
 		quantity INTEGER,
@@ -32,6 +32,10 @@ create_orders_table_cmd = <<-SQL
 		FOREIGN KEY (customer_id) REFERENCES customers(id)
 		)
 SQL
+
+#create tables
+#db.execute(create_customer_cmd)
+#db.execute(create_orders_table_cmd)
 
 
 
