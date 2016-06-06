@@ -30,3 +30,15 @@ SQL
 db.execute(create_classes)
 db.execute(create_roster)
 
+#create method to add students
+def add_student(db, name, class_id, paid)
+	db.execute("INSERT INTO students (name, class_id, paid) VALUES (?,?,?)", [name, class_id, paid])
+end
+
+#add multiple student values to student table
+#24.times do 
+#	add_student(db, Faker::Name.name, rand(1..9), 'true')
+#end
+
+
+
