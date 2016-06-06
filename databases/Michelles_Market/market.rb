@@ -30,4 +30,6 @@ def add_customers(db, name, email, phone, address, city, state, zip)
 	db.execute("INSERT INTO customers (name, email, phone, address, city, state, zip) VALUES (?, ?, ?, ?, ?, ?, ?)", [name, email, phone, address, city, state, zip])
 end
 
-
+30.times do 
+	add_customers(db, Faker::Name.name, Faker::Internet.email, Faker::PhoneNumber.phone_number, Faker::Address.street_address, Faker::Address.city, Faker::Address.state_abbr, Faker::Address.zip_code)
+end
