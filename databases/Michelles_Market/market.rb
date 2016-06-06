@@ -19,8 +19,15 @@ create_customers = <<-SQL
   )
 SQL
 
-#create customer table
+#create customers table
 db.execute(create_customers)
 
 #add test customer
 #db.execute("INSERT INTO customers (name, email, phone, address, city, state, zip) VALUES ('Simone Rockwell', 'simrock@gmail.com', 8476665783, '450 Canteburry Cove St.', 'Lake George', 'PA', 67995)")
+
+#create method to add multiple customers to the customers table
+def add_customers(db, name, email, phone, address, city, state, zip)
+	db.execute("INSERT INTO customers (name, email, phone, address, city, state, zip) VALUES (?, ?, ?, ?, ?, ?, ?)", [name, email, phone, address, city, state, zip])
+end
+
+
