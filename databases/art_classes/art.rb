@@ -45,6 +45,11 @@ def update_pay_status(db, name)
 	db.execute("UPDATE students SET paid='true' WHERE name = ?", [name])
 end
 
+#create method that lists student name with the class they are enrolled in"
+def print_data(db)
+	db.execute("SELECT students.name, classes.name, classes.days, classes.meeting_time FROM students, classes WHERE classes.id = students.class_id")
+
+end
 
 #add multiple student values to student table
 #24.times do 
@@ -58,13 +63,26 @@ puts '--------------------------------'
 
 until done == true
  
+	puts "Enter 'roster' to view what classes students are currently enrolled in" 
 	puts "Enter 'enroll' to enroll a new student"
 	puts "Enter 'payment' to submit a student payment"
 	puts "Enter 'withdraw' to withdraw a student from a class"
 	puts "Enter 'done' to exit the program."
 	action = gets.chomp
 	
-	if action == 'enroll'
+	if action == 'roster'
+		puts '--------------------------------'
+		roster_details = print_data(db)
+	
+		roster_details.each do |name, course, day, time|
+			puts "#{name} is enrolled in #{course} on #{day} at #{time}."
+		end
+
+		puts '--------------------------------'
+		done = false
+
+	elsif action == 'enroll'
+		puts '--------------------------------'
 		puts 'Please enter the class id:'
 		id = gets.chomp
 		puts 'Enter student name:'
@@ -77,6 +95,7 @@ until done == true
 		done = false
 	
 	elsif  action == 'payment'
+		puts '--------------------------------'
 		puts 'Enter student name:'
 		student = gets.chomp 
 		update_pay_status(db, student)
@@ -85,6 +104,7 @@ until done == true
 		done = false
 	
 	elsif action == 'withdraw'
+		puts '--------------------------------'
 		puts 'Enter student name:'
 		student = gets.chomp 
 		delete_student(db, student)
@@ -93,6 +113,7 @@ until done == true
 		done = false
 	
 	else action == 'done'
+
 		puts "Thank you for using the Summer 2016 Art Class Directory."
 		done = true
 	end
