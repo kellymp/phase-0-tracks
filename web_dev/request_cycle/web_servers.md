@@ -1,4 +1,4 @@
-** What are some of the key design philosophies of the Linux operating system?**
+**What are some of the key design philosophies of the Linux operating system?**
 
 * create programs that do one singular thing well. Write separate programs for each thing as to not complicate the first program.
 * write programs that work well together
