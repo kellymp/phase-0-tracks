@@ -11,9 +11,9 @@
 
 **What is the difference between a GET request and a POST request? When might each be used?**
 
-* *GET* request- requests data from a specified resource. They should be used only to retrieve data and should never be used when dealing with sensitive data. They remain in the browser history and can be bookmarked.
+* *GET request*- requests data from a specified resource. They should be used only to retrieve data and should never be used when dealing with sensitive data. They remain in the browser history and can be bookmarked.
 
-* *POST* request- submits data to be processed to a specified resource and is used for sensitive data. They do not remain in the browser history and cannot be bookmarked.
+* *POST request*- submits data to be processed to a specified resource and is used for sensitive data. They do not remain in the browser history and cannot be bookmarked.
 
 **BONUS: What is a cookie? How does it relate to HTTP requests?** 
 
