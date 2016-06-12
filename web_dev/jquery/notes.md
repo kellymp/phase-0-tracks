@@ -1,0 +1,3 @@
+#Effective Strategies For Learning JQuery
+
+I started out by looking up some cheatsheets and reviewing those to become familiar with what I would be looking at. Next I decided to watch some youtube videos of people using JQuery which became boring and hard to follow as I lost interest. I decided to do something more hands-on because I learn best by doing. To do this, I did the codecedemy tutorial for JQuery which I think left me with a good basic understanding. 

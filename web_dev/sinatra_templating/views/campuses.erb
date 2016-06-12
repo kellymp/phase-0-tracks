@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Campus List</title>
+</head>
+<body>
+<h1>Student Management System </h1>
+	<p>Below find our current campuses:</p>
+	<ul>
+    <% @campuses.each do |campus| %>
+      <li><%= campus['name'] %></li>
+    <% end %>
+</body>
+</html>
+
+<p>Click <a href="/campuses/new">here</a> to create a new campus.</p>
+
