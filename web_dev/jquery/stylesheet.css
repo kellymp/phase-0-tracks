@@ -9,10 +9,12 @@ div {
     font-size:2em;
     margin: auto;
     margin-bottom:50px;
+    opacity: 0;
 }
 
 p {
     font-family: Helvetica;
     text-align: center;
     margin: auto;
+    margin-bottom: 50px;
 }
