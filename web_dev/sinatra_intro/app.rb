@@ -51,4 +51,28 @@ get '/contact' do
   "1234 W. Armitage Ave<br> Chicago, IL 60614"
 end
 
+# write route that takes a person's name as a query paramater
+# and says good job, name  IF name is present
+
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
+#write route that uses route parameters to add two numbers 
+#and responds with the result
+
+get '/:num_1/add/:num_2' do
+  num_1 = params[:num_1].to_i
+  num_2 = params[:num_2].to_i
+  result = num_1 + num_2
+  "#{num_1} + #{num_2} = #{result}"
+end
+
+
+
 
